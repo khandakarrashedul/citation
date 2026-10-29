@@ -170,7 +170,7 @@
            To update your numbers later, change the number inside each
            <span class="stat-number"> and the label next to it. -->
       <section class="stats" aria-label="Research at a glance">
-        <div class="container stats-grid">
+        <div class="container stats-grid stats-grid-4">
 
         <div class="card stat reveal">
             <span class="stat-number">Current</span>
@@ -183,6 +183,12 @@
           <div class="card stat reveal">
             <span class="stat-number">16</span>
             <span class="stat-label">Published papers in peer-reviewed journals</span>
+          </div>
+          <!-- Citation count: filled in automatically from data/scholar.json (Google Scholar).
+               "300+" is only shown if that file cannot be loaded. -->
+          <div class="card stat reveal" data-scholar-box>
+            <span class="stat-number" data-scholar="citations">300+</span>
+            <span class="stat-label"><a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&amp;hl=en">Citations on Google Scholar</a></span>
           </div>
         </div>
       </section>

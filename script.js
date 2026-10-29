@@ -459,4 +459,16 @@ applyTheme(startTheme);
       }
     }
   }
+  /* ---------- 17. Google Scholar citation count (home page) ----------
+     Reads data/scholar.json, which the GitHub Action refreshes automatically. */
+  var scholarNumber = document.querySelector("[data-scholar='citations']");
+  if (scholarNumber && window.fetch) {
+    fetch("data/scholar.json", { cache: "no-cache" }).then(function (response) {
+      return response.ok ? response.json() : null;
+    }).then(function (data) {
+      if (data && typeof data.citations === "number") {
+        scholarNumber.textContent = data.citations.toLocaleString();
+      }
+    }).catch(function () { /* file missing: keep the fallback text */ });
+  }
 })();
