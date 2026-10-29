@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Vitae | Khandakar Rashedul Islam</title>
+  <meta name="description" content="Curriculum vitae of Khandakar Rashedul Islam, environmental science researcher.">
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Falling background symbols (filled in by script.js) -->
+  <div class="bg-glyphs" id="bg-glyphs" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Dark overlay behind the sidebar on tablet and mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Site menu">
+
+    <button class="icon-btn sidebar-close" id="sidebar-close" type="button" aria-label="Close menu">✕</button>
+
+    <a class="side-brand" href="index.html">
+      <!--
+        SIDEBAR PHOTO: to use your photo, upload assets/profile.jpg, then replace the <span> line below with:
+        <img class="side-avatar" src="assets/profile.jpg" alt="Khandakar Rashedul Islam">
+      -->
+      <span class="side-avatar" aria-hidden="true">KRI</span>
+      <span class="side-brand-text">
+        <span class="side-name">Khandakar Rashedul Islam</span>
+        <span class="side-title">Environmental Science Researcher</span>
+      </span>
+    </a>
+
+    <nav class="side-nav" aria-label="Main navigation">
+      <ul>
+        <li>
+          <a href="about.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="research.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg></span>
+            Research
+          </a>
+        </li>
+        <li>
+          <a href="publications.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+            Publications
+          </a>
+        </li>
+        <li>
+          <a href="cv.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-1.5 5.5-1.5 6 0M15 10h3M15 14h3"/></svg></span>
+            CV
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--
+      PROFILE LINKS (bottom of sidebar). This is the ONLY place you need to edit your profile links.
+      The buttons in the Contact section copy these automatically.
+      To activate an icon: replace href="#contact" with your real link and delete the word is-placeholder.
+      To remove an icon: delete its whole <a ...> ... </a> block.
+    -->
+       <div class="sidebar-links" aria-label="Academic profiles">
+      <a class="profile-icon" href="https://www.linkedin.com/in/khandakarrashedulislam/" data-profile="linkedin" title="LinkedIn" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&amp;hl=en" data-profile="scholar" title="Google Scholar" aria-label="Google Scholar">
+        <img src="assets/icons/scholar.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://orcid.org/0000-0001-8953-0224" data-profile="orcid" title="ORCID" aria-label="ORCID">
+        <img src="assets/icons/orcid.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://www.researchgate.net/profile/Khandakar-Rashedul-Islam-2?ev=hdr_xprf" data-profile="researchgate" title="ResearchGate" aria-label="ResearchGate">
+        <img src="assets/icons/researchgate.svg" alt="" width="20" height="20">
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ===================== MAIN AREA ===================== -->
+  <div class="main-area">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <a class="site-logo" href="index.html" aria-label="Home">
+          <img src="assets/logo.png" alt="Khandakar Rashedul Islam logo" width="36" height="36">
+        </a>
+        <div class="clock">
+          <span class="clock-time" id="clock-time">--:--</span>
+          <span class="clock-date" id="clock-date"></span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <label class="visually-hidden" for="theme-select">Colour theme</label>
+        <select class="theme-select" id="theme-select">
+          <option value="forest">🌲 Forest</option> 
+          <option value="light">🌞 Light</option>
+          <option value="dark">🌙 Dark</option>
+         
+        </select>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ===================== CV ===================== -->
+      <section class="section" id="cv">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Resume</p>
+            <h2>Curriculum Vitae</h2>
+          </div>
+
+          <!-- These buttons work once you upload your CV as assets/cv.pdf -->
+          <div class="cv-actions reveal">
+            <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">Open in new tab</a>
+            <a class="btn btn-outline" href="assets/cv.pdf" download>Download PDF</a>
+          </div>
+
+          <!-- CV viewer: shows the PDF inside the page -->
+          <div class="cv-viewer reveal">
+            <iframe class="cv-frame" src="assets/cv.pdf#toolbar=1&amp;navpanes=1&amp;view=FitH" title="Curriculum vitae (PDF)"></iframe>
+            <p class="cv-fallback">The PDF preview is not available on this device. Please use the buttons above to open or download my CV.</p>
+                      <div class="cv-pages" id="cv-pages" aria-label="CV preview pages"></div>  
+          </div>
+        </div>
+      </section>
+
+</main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="current-year">2026</span> Khandakar Rashedul Islam. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Khandakar Rashedul Islam</title>
+  <meta name="description" content="Peer-reviewed publications of Khandakar Rashedul Islam on microplastics, adsorption and potentially toxic elements.">
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Falling background symbols (filled in by script.js) -->
+  <div class="bg-glyphs" id="bg-glyphs" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Dark overlay behind the sidebar on tablet and mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Site menu">
+
+    <button class="icon-btn sidebar-close" id="sidebar-close" type="button" aria-label="Close menu">✕</button>
+
+    <a class="side-brand" href="index.html">
+      <!--
+        SIDEBAR PHOTO: to use your photo, upload assets/profile.jpg, then replace the <span> line below with:
+        <img class="side-avatar" src="assets/profile.jpg" alt="Khandakar Rashedul Islam">
+      -->
+      <span class="side-avatar" aria-hidden="true">KRI</span>
+      <span class="side-brand-text">
+        <span class="side-name">Khandakar Rashedul Islam</span>
+        <span class="side-title">Environmental Science Researcher</span>
+      </span>
+    </a>
+
+    <nav class="side-nav" aria-label="Main navigation">
+      <ul>
+        <li>
+          <a href="about.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="research.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg></span>
+            Research
+          </a>
+        </li>
+        <li>
+          <a href="publications.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+            Publications
+          </a>
+        </li>
+        <li>
+          <a href="cv.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-1.5 5.5-1.5 6 0M15 10h3M15 14h3"/></svg></span>
+            CV
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--
+      PROFILE LINKS (bottom of sidebar). This is the ONLY place you need to edit your profile links.
+      The buttons in the Contact section copy these automatically.
+      To activate an icon: replace href="#contact" with your real link and delete the word is-placeholder.
+      To remove an icon: delete its whole <a ...> ... </a> block.
+    -->
+       <div class="sidebar-links" aria-label="Academic profiles">
+      <a class="profile-icon" href="https://www.linkedin.com/in/khandakarrashedulislam/" data-profile="linkedin" title="LinkedIn" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&amp;hl=en" data-profile="scholar" title="Google Scholar" aria-label="Google Scholar">
+        <img src="assets/icons/scholar.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://orcid.org/0000-0001-8953-0224" data-profile="orcid" title="ORCID" aria-label="ORCID">
+        <img src="assets/icons/orcid.svg" alt="" width="20" height="20">
+      </a>
+      <a class="profile-icon" href="https://www.researchgate.net/profile/Khandakar-Rashedul-Islam-2?ev=hdr_xprf" data-profile="researchgate" title="ResearchGate" aria-label="ResearchGate">
+        <img src="assets/icons/researchgate.svg" alt="" width="20" height="20">
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ===================== MAIN AREA ===================== -->
+  <div class="main-area">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <a class="site-logo" href="index.html" aria-label="Home">
+          <img src="assets/logo.png" alt="Khandakar Rashedul Islam logo" width="36" height="36">
+        </a>
+        <div class="clock">
+          <span class="clock-time" id="clock-time">--:--</span>
+          <span class="clock-date" id="clock-date"></span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <label class="visually-hidden" for="theme-select">Colour theme</label>
+        <select class="theme-select" id="theme-select">
+          <option value="forest">🌲 Forest</option> 
+          <option value="light">🌞 Light</option>
+          <option value="dark">🌙 Dark</option>
+         
+        </select>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ===================== PUBLICATIONS ===================== -->
+      <section class="section" id="publications">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Publications</p>
+            <h2>Selected Publications</h2>
+            <p class="section-lead">
+              Peer-reviewed articles in Q1 journals, plus manuscripts that are submitted or under review. Use the filters to narrow by year, category or keyword.
+            </p>
+          </div>
+
+          <!-- Filter panel. The Year and Category lists fill themselves in from your entries below. -->
+          <div class="filter-panel reveal" role="search">
+            <div class="field">
+              <label class="field-label" for="pub-year">Year</label>
+              <select class="field-input" id="pub-year">
+                <option value="all">All Years</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="pub-category">Category</label>
+              <select class="field-input" id="pub-category">
+                <option value="all">All Categories</option>
+              </select>
+            </div>
+            <div class="field field-grow">
+              <label class="field-label" for="pub-search">Search</label>
+              <input class="field-input" id="pub-search" type="search" placeholder="Search publications…" autocomplete="off">
+            </div>
+            <div class="view-toggle" role="group" aria-label="Publication view">
+              <button class="view-btn" type="button" data-view="detail" aria-pressed="true">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Detail
+              </button>
+              <button class="view-btn" type="button" data-view="compact" aria-pressed="false">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 12h16M12 4v16"/></svg>
+                Compact
+              </button>
+            </div>
+          </div>
+
+          <!--
+            HOW TO ADD A PUBLICATION
+            Copy one complete <article class="card pub-card ..."> ... </article> block, paste it below the last one,
+            and edit the text. You only edit the visible text. The filters read these parts automatically:
+              - the year          (the text inside class="pub-year", four digits like 2025)
+              - the category      (the text inside class="pub-category")
+              - everything else   (used by the search box)
+            Type badge: change the word Journal / Preprint / Under review, and the class word:
+              type-journal   type-preprint   type-review
+            To add a PDF button: copy the DOI <a ...> line, change the word DOI to PDF and use the PDF link.
+          -->
+          <div class="pub-list">
+
+<!-- ENTRY 1 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health.</h3>
+    <p>Chowdhury, P., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Ecotoxicology and Environmental Safety</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2026</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Oxbow lakes</li>
+        <li class="tag">Ecological risks</li>
+      </ul>
+      <p class="pub-summary">This study examined microplastic (MP) contamination and associated ecological and dietary exposure risks in water, sediment, and fish from three oxbow lakes- Bukbhara, Marjat, and Jhanpa in southwestern Bangladesh. The study analyzed 75 water samples, 75 sediment samples, and 45 fish using microscopy, ATR-FTIR, SEM-EDS, and pollution-risk indices. MP concentrations ranged from 36–356 items/L in water and 398–2,763 items/kg in sediment, while fish contained 3–24 items/individual. Fibers predominated, and polyethylene (38%) and polypropylene (21%) were the leading polymers. Risk indices indicated moderate-to-severe contamination, and estimated dietary exposure suggested children ingest MPs via fish at 3.67 times the adult rate.
+</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.ecoenv.2026.119820" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 2 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils, Bangladesh using Machine Learning and Multi-Matrix approaches.</h3>
+    <p>Biswas, A., Debnath, P. C., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Environmental Pollution</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2026</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Agricultural soils</li>
+        <li class="tag">Machine learning</li>
+      </ul>
+      <p class="pub-summary">This study assessed microplastic (MP) contamination, potential sources, and ecological risks in agricultural soils across eight upazilas of Jashore, Bangladesh. Sixty-four soil samples collected in 2024 were examined using microscopy, ATR-FTIR, SEM-EDS, pollution indices, multivariate analysis, and machine learning. Mean abundance reached 2,887.81 ± 1,027.23 MPs/kg dry soil. Fibers dominated (85%), 0.1–0.5 mm particles were most common (40%), and polyethylene was the leading polymer (41.35%). Risk indices indicated substantial contamination, with 81% of the study area classified as having very high ecological risk. Random Forest and XGBoost identified soil electrical conductivity, salinity, pH, organic carbon, and texture as key predictors, while agricultural plastic use and bio-fertilizers emerged as potential sources.
+</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.envpol.2026.127669" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 3 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Microplastic contaminants in eggs: Identification, characterization, and potential risks.</h3>
+    <p>Rayhan, M. A., Debnath, P. C., Kharel, G., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Food Bioscience</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2025</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Food contamination</li>
+        <li class="tag">Potential risks</li>
+      </ul>
+      <p class="pub-summary">This study investigated microplastic (MP) contamination in 60 farmed and locally sourced eggs (layer, broiler, duck, and home hen) collected in southwestern Bangladesh. Particles were characterized using optical microscopy, Raman spectroscopy, and ATR-FTIR, while pollution indices and artificial neural networks supported risk assessment. MPs occurred in all egg categories, averaging 10.77 ± 3.77 MPs/egg, with the highest abundance in layer eggs (13.47 ± 3.70 MPs/egg) and the lowest in home-hen eggs (7.67 ± 2.72 MPs/egg). Fibers predominated, particles measured 18–69 μm, and polyethylene accounted for 75% of identified polymers. Risk indices indicated considerable-to-severe contamination, while estimated dietary exposure was up to 3.31 times higher in toddlers than adults, highlighting the need for food-safety monitoring.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.fbio.2025.108163" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+            <!-- ENTRY 4 (placeholder) -->
+            <article class="card pub-card is-open reveal">
+              <div class="pub-main">
+                <h3 class="pub-title">Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh: A Comprehensive Study on Source Appointments, Distribution, and Potential Risks.</h3>
+                <p><strong>Islam, K. R.</strong>, Debnath, P. C., Rahman, M. S., et al...</p>
+                <div class="pub-meta">
+                  <span class="type-badge type-journal">Journal</span>
+                  <span class="type-badge type-placeholder">Placeholder</span>
+                  <span class="meta-item">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+                    <span class="pub-journal">Journal of Hazardous Materials Advances</span>
+                  </span>
+                  <span class="meta-item">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+                    <span class="pub-year">2025</span>
+                  </span>
+                  <span class="meta-item">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+                    <span class="pub-category">Microplastics</span>
+                  </span>
+                </div>
+                <div class="pub-extra">
+                  <ul class="tag-list pub-tags">
+                    <li class="tag">Microplastic</li>
+                    <li class="tag">Ecological risks</li>
+                  </ul>
+                  <p class="pub-summary">This study assessed the occurrence, characteristics, and ecological risks of microplastics (MPs) in water, sediment, and biota from Kuakata Sea Beach, Bangladesh. Samples from 12 locations were analysed using sieving, wet peroxide digestion, density separation, optical microscopy, and FTIR spectroscopy. MP concentrations were higher in sediment (362.1 ± 50.1 MPs/kg) than in water (145.5 ± 40.7 MPs/L) and biota. Fibers and films were the dominant shapes, while polyethylene (PE) was the most frequently identified polymer. Pollution indices indicated moderate to severe contamination, highlighting the need for continued monitoring and targeted mitigation. These findings establish a baseline for assessing MP pollution and potential ecological risks in Kuakata.</p>
+                  <div class="pub-links">
+                    <!-- To activate: replace href with your DOI link and delete the word is-placeholder -->
+                    <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.hazadv.2025.100829">
+                      <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+                      DOI
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+              </button>
+            </article>
+
+<!-- ENTRY 5 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Unveiling the hidden pollutants in the indoor environment: Focus on microplastic pollution and its related risks in the educational institutions of megacity, Bangladesh.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Environmental Pollution</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2025</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Indoor environment</li>
+        <li class="tag">Educational institutions</li>
+      </ul>
+      <p class="pub-summary">This study investigated microplastic (MP) contamination and potential health risks in settled classroom dust from educational institutions in a major Bangladeshi city. Samples were analyzed using wet peroxide oxidation, stereomicroscopy, ATR-FTIR, and SEM-EDS. Mean MP abundance was 16,436.67 ± 8,534.06 particles/kg, with fibers accounting for 89% and particles measuring 100–500 μm comprising 44%. Polystyrene was the dominant polymer (40.6%). Pollution indices indicated moderate-to-high contamination and considerable-to-high polymer-associated risks. Estimated daily intake through dust ingestion was 0.39 ± 0.20 particles for children and 0.29 ± 0.15 for adults, highlighting potentially greater exposure risks among children and the need for improved indoor air-quality management.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.envpol.2025.126831" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 6 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Physicochemical characterization, ecological risk assessment and spatial distribution of microplastics in Bangladesh's largest coral reef systems.</h3>
+    <p>Nice, M. S., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Physics and Chemistry of the Earth</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2025</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Coral reef systems</li>
+        <li class="tag">Spatial distribution</li>
+      </ul>
+      <p class="pub-summary">This study assessed microplastic (MP) contamination and associated ecological and dietary risks in surface water, sediment, and marine biota at Saint Martin’s Island, Bangladesh’s largest coral island. Fish, crustaceans, and seaweeds were analyzed using stereomicroscopy and ATR-FTIR. MP concentrations averaged 141.25 ± 35.26 MPs/L in water and 580.83 ± 131.78 MPs/kg dry sediment, while biota contained 28.03, 20.88, and 8.21 MPs/individual in fish, crustaceans, and seaweeds, respectively. Fibers predominated, with polypropylene and polyethylene as the leading polymers. Risk indices indicated variable contamination levels, while dietary exposure estimates suggested children ingest approximately three times more MPs than adults through seafood consumption, underscoring the need for targeted coastal pollution monitoring and mitigation.
+</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.pce.2025.104164" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 7 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Evaluating the impacts of microplastics on agricultural soil physical, chemical properties, and toxic metal availability: An emerging concern for sustainable agriculture.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">PLOS ONE</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2025</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Agricultural soils</li>
+        <li class="tag">Toxic metal availability</li>
+      </ul>
+      <p class="pub-summary">This study investigated how microplastics (MPs) influence soil physicochemical properties, nutrient levels, and heavy metal availability in contaminated and uncontaminated soils. A 90-day incubation experiment evaluated five treatments-polyethylene (PE), polyethylene terephthalate (PET), polystyrene foam (PS), polyamide (PA), and mixed MPs-at concentrations of 0.2% and 1% (w/w). MPs significantly altered soil bulk density, porosity, water-holding capacity, pH, electrical conductivity, organic carbon, and organic matter. Their effects varied by polymer type and concentration, with PS showing the strongest influence, followed by mixed MPs, PA, PET, and PE. Heavy metal availability decreased as MP concentration increased, highlighting potential implications for soil quality and metal mobility.
+</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1371/journal.pone.0304811" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 8 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Journal of Hazardous Materials</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2024</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Milk</li>
+        <li class="tag">Human health</li>
+      </ul>
+      <p class="pub-summary">This study investigated microplastic (MP) contamination and potential dietary exposure risks in 25 commercially available milk brands in Bangladesh, comprising 19 powdered and six liquid milk products. MPs were characterized using microscopy and spectroscopic techniques, while pollution indices assessed contamination and polymer-associated risks. Mean concentrations were 279.47 ± 134.26 particles/kg in powdered milk and 182.27 ± 55.13 particles/L in liquid milk. Fibers predominated, and polyethylene was the most common polymer, accounting for 48% and 44% of MPs in powdered and liquid milk, respectively. Risk indices indicated moderate-to-high contamination, with powdered milk showing greater pollution. Estimated exposure was 3.43 times higher in children than adults, highlighting the need for improved monitoring during milk production, storage, and packaging.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.jhazmat.2024.135374" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 9 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Application of machine learning and multivariate approaches for assessing microplastic pollution and its associated risks in the urban outdoor environment of Bangladesh.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Journal of Hazardous Materials</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2024</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Urban outdoor environment</li>
+        <li class="tag">Machine learning</li>
+      </ul>
+      <p class="pub-summary">This study assessed microplastic (MP) contamination and associated ecological and human health risks in urban road dust across Bangladesh using pollution indices, multivariate analysis, and machine learning. Mean MP abundance was 52.76 ± 20.24 particles/g, with fibers (77%), 0.1–0.5 mm particles (75%), blue particles (26%), and low-density polyethylene (24%) predominating. Pollution indices indicated moderate-to-severe contamination, while polymer-based assessments revealed high to very high ecological risks. Random Forest and support vector machine models identified electrical conductivity, salinity, pH, organic carbon, and soil texture as key predictors. Estimated annual ingestion reached 19,259.68 particles for children and 5,777.90 for adults, with higher estimated cancer risks for children. Dhaka was the most polluted division.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.jhazmat.2024.134359" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0-5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 10 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Appraisal of microplastic pollution and its related risks for urban indoor environment in Bangladesh using machine learning and diverse risk evolution indices.</h3>
+    <p>Netema, B. N., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Environmental Pollution</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2024</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Microplastics</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Urban indoor environment</li>
+        <li class="tag">Risk assessment</li>
+      </ul>
+      <p class="pub-summary">This study investigated microplastic (MP) contamination and potential health risks in indoor household dust across urban Bangladesh. Eighty dust samples were analyzed using particle characterization, pollution indices, and machine learning approaches. Mean MP abundance was 25.8 ± 6.43 particles/g, with fibers (73%), particles sized 0.5–1.0 mm (58%), blue particles (21%), and polystyrene (34%) predominating. Pollution indices indicated moderate-to-high contamination, while polymer hazard assessment revealed considerable risks. Random Forest and support vector machine models identified electrical conductivity, salinity, pH, organic carbon, and texture as influential predictors. Estimated daily ingestion was 4.12 ± 1.01 particles for children and 2.27 ± 0.57 for adults, highlighting greater potential risks for children.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.envpol.2024.124631" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 11 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Application of machine learning and statistical approaches for optimization of heavy metals (Cd2+, Pb2+, Cu2+, and Zn2+) adsorption onto carbonized char prepared from PET plastic bottle waste.</h3>
+    <p>Chakraborty, T. K., Rahman, S., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">AQUA-Water Infrastructure, Ecosystems and Society</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2024</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Adsorption</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Heavy metals</li>
+        <li class="tag">PET-derived char</li>
+      </ul>
+      <p class="pub-summary">Discarded polyethylene terephthalate (PET) bottles were converted into graphene for heavy metal removal from wastewater. The synthesized material was characterized using FE-SEM, EDX, and FTIR, followed by batch adsorption experiments under varying operational conditions. At pH 7, removal efficiencies reached 86.68% for cadmium (Cd), 73.66% for lead (Pb), 67.10% for copper (Cu), and 57.04% for zinc (Zn). Maximum adsorption capacities were 263.157, 78.740, 196.078, and 84.745 mg/g, respectively. Artificial neural networks and response surface methodology supported process optimization. Adsorption was favorable, spontaneous, and exothermic, demonstrating the potential of plastic-derived graphene for wastewater treatment.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.2166/aqua.2024.222" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 12 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Adsorption of acid and basic dye from the simulated wastewater using carbonized microplastic particles synthesized from recycled polyethylene terephthalate plastic waste bottles: an integrated approach for experimental and practical applications.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">AQUA-Water Infrastructure, Ecosystems and Society</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2023</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Adsorption</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Dye removal</li>
+        <li class="tag">Recycled PET</li>
+      </ul>
+      <p class="pub-summary">This study investigated the use of carbonized microplastic particles (CMPs) derived from polyethylene terephthalate (PET) bottle waste for removing methylene blue (MB) and methyl orange (MO) dyes from water. Batch experiments and response surface methodology (RSM) showed that pH and adsorbent dosage significantly affected dye removal, achieving maximum efficiencies of 99.95% for MO at pH 3 and 99.04% for MB at pH 11. The quadratic RSM models showed strong fits (R² = 0.99 for MO; 0.92 for MB), while neural networks correlated well with experimental results. Adsorption followed pseudo-second-order kinetics and Langmuir isotherms and was favorable, spontaneous, and exothermic. Real-wastewater and desorption tests further supported CMPs’ potential for dye treatment.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.2166/aqua.2023.211" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 13 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Receptor model-based sources and risks appraisal of potentially toxic elements in the urban soils of Bangladesh.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Toxicology Reports</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2023</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Potentially toxic elements</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Urban soils</li>
+        <li class="tag">Source apportionment</li>
+      </ul>
+      <p class="pub-summary">This study assessed potentially toxic elements (As, Cd, Pb, Cr, Ni, and Cu) in 71 soil samples from 11 land-use types in Jashore, Bangladesh, using AAS. Contamination indices identified Cd as a contributor to pollution. Positive matrix factorization linked As, Cd, Cu, Pb, and Ni mainly to industrial and mixed anthropogenic sources, while Cr was natural. Metal workshops had the highest contamination, followed by industrial and brickfield areas. Ingestion was the main exposure route. Non-cancer risks were below the hazard-index threshold, but arsenic-related cancer risks exceeded acceptable levels for children and adults. This study highlights the need for soil management.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.toxrep.2023.02.011" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 14 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Application of machine learning and multivariate approaches for source apportionment and risks of hazardous elements in the cropland soils near industrial areas in Bangladesh.</h3>
+    <p>Chakraborty, T. K., …, <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Ecological Indicators</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2023</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Potentially toxic elements</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Cropland soils</li>
+        <li class="tag">Machine learning</li>
+      </ul>
+      <p class="pub-summary">This study assessed six hazardous elements (As, Pb, Cd, Cr, Ni, and Cu) in agricultural soils near industrial areas of Bangladesh to investigate contamination levels, potential sources, and ecological and human health risks. Using multivariate analysis, positive matrix factorization, self-organizing maps, random forest, and pollution indices, the study identified multiple contamination sources, including anthropogenic activities and atmospheric fallout. Cadmium, nickel, and copper exceeded international soil quality standards, while approximately 77% of the study area was classified as polluted. Ecological risk ranged from moderate to high in 20–53% of samples, and the findings indicated potential carcinogenic health risks, particularly for children.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.ecolind.2023.110856" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+
+<!-- ENTRY 15 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Removal of hazardous textile dye from simulated wastewater by municipal organic solid waste charcoal using machine learning approaches: Kinetics, isotherm, and thermodynamics.</h3>
+    <p>Chakraborty, T. K., Ghosh, S., Nice, M. S., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">Heliyon</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2023</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Adsorption</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Textile dye</li>
+        <li class="tag">Waste-derived charcoal</li>
+      </ul>
+      <p class="pub-summary">This study evaluated municipal organic solid waste charcoal (MOSWC) as a low-cost adsorbent for removing methyl orange (MO) from wastewater. The prepared charcoal was characterized using FE-SEM and FT-IR, followed by batch adsorption experiments under varying operational conditions. The maximum observed adsorption efficiency was 40.11 mg/g at pH 3, an MO concentration of 100 mg/L, and an adsorbent dose of 1 g/L, while the maximum monolayer adsorption capacity reached 90.909 mg/g. Artificial neural networks and batch-based response surface methodology showed good agreement between predicted and experimental results. Adsorption followed pseudo-second-order kinetics and the Langmuir isotherm, demonstrating the potential of MOSWC for dye-contaminated wastewater treatment.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1016/j.heliyon.2023.e18856" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+  <!-- ENTRY 16 -->
+<article class="card pub-card is-open reveal">
+  <div class="pub-main">
+    <h3 class="pub-title">Black carbon derived PET plastic bottle waste and rice straw for sorption of Acid Red 27 dye: Machine learning approaches, kinetics, isotherm and thermodynamic studies.</h3>
+    <p>Chakraborty, T. K., Tammim, L., <strong>Islam, K. R.</strong>, et al.</p>
+    <div class="pub-meta">
+      <span class="type-badge type-journal">Journal</span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg>
+        <span class="pub-journal">PLOS ONE</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        <span class="pub-year">2023</span>
+      </span>
+      <span class="meta-item">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>
+        <span class="pub-category">Adsorption</span>
+      </span>
+    </div>
+    <div class="pub-extra">
+      <ul class="tag-list pub-tags">
+        <li class="tag">Acid Red 27</li>
+        <li class="tag">Black carbon</li>
+      </ul>
+      <p class="pub-summary">This study investigated PET waste-derived black carbon (PETWBC) and rice straw black carbon (RSBC) as adsorbents for removing Acid Red 27 (AR 27) from aqueous solutions. The materials were characterized using FE-SEM and FT-IR, followed by batch adsorption experiments under varying operating conditions. Both adsorbents achieved high removal efficiencies at pH 2, reaching 99.88% for PETWBC and 99.89% for RSBC. Artificial neural networks and batch-based response surface methodology showed good agreement between predicted and experimental results. Adsorption followed pseudo-second-order kinetics and the Freundlich isotherm, while thermodynamic analysis indicated favorable, spontaneous, and endothermic adsorption. Desorption and real wastewater experiments further supported their potential for dye removal.</p>
+      <div class="pub-links">
+        <a class="btn btn-outline btn-small" href="https://doi.org/10.1371/journal.pone.0290471" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          DOI
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="pub-toggle" type="button" aria-expanded="true" aria-label="Collapse details">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</article>
+          </div>
+
+          <p class="empty-message" id="pub-empty" hidden>No publications match these filters.</p>
+        </div>
+      </section>
+
+</main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="current-year">2026</span> Khandakar Rashedul Islam. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
