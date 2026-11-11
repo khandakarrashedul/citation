@@ -471,4 +471,39 @@ applyTheme(startTheme);
       }
     }).catch(function () { /* file missing: keep the fallback text */ });
   }
+  /* ---------- 17. Contact form: opens the visitor's email app with the message filled in ---------- */
+  var contactForm = document.getElementById("contact-form");
+  var formStatus = document.getElementById("form-status");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var nameEl = document.getElementById("cf-name");
+      var emailEl = document.getElementById("cf-email");
+      var msgEl = document.getElementById("cf-message");
+      var fields = [nameEl, emailEl, msgEl];
+      var valid = true;
+
+      fields.forEach(function (el) {
+        var ok = el.value.trim() !== "" && (el !== emailEl || /^\S+@\S+\.\S+$/.test(el.value.trim()));
+        el.classList.toggle("is-invalid", !ok);
+        if (!ok) { valid = false; }
+      });
+
+      if (!valid) {
+        formStatus.textContent = "Please fill in all fields with a valid email address.";
+        formStatus.classList.add("is-error");
+        return;
+      }
+
+      var subject = "Website message from " + nameEl.value.trim();
+      var body = msgEl.value.trim() + "\n\nFrom: " + nameEl.value.trim() + " (" + emailEl.value.trim() + ")";
+      window.location.href = "mailto:khandakarrashedulislam@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      formStatus.classList.remove("is-error");
+      formStatus.textContent = "Opening your email app… if nothing opens, please email me directly.";
+      contactForm.reset();
+    });
+  }
 })();
